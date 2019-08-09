@@ -1,0 +1,16 @@
+  <ion-content>
+    <!-- <ion-button size="small" *ngFor="let item of passedId" value="{{item}}">{{item}}</ion-button> -->
+    <ion-item padding>Data: {{returnValue}}</ion-item>
+    <ion-list>
+      <ion-button  ion-item *ngFor="let word of wordsArray" (click)="addWord($event)">
+        {{ word }}
+      </ion-button>
+    </ion-list>
+</ion-content>
+<br>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" fill="solid" color="danger" (click)="clearReturnField()">Clear</ion-button>
+      <ion-button expand="block" fill="solid" (click)="closeModal()">Close</ion-button>
+    </ion-toolbar>
+  </ion-footer>

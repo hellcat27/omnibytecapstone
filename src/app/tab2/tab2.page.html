@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Form
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-button fill="solid" (click)="refresh()">
+            <ion-icon slot="start" name="refresh"></ion-icon>Refresh
+    </ion-button>
+    <ion-item>
+        <ion-label>Data below labels?</ion-label>
+        <ion-toggle [(ngModel)]="alternateOrientation"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>From tab3: </ion-label> 
+      <ion-label text-wrap> {{text}} </ion-label> 
+    </ion-item>
+
+    <hr>
+
+    <div>
+            <ion-item>
+                <ion-input type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
+                <ion-button slot="end" size="small" (click)="selectName()">Manual</ion-button>
+                <ion-button slot="end" size="small" (click)="autoSelectName()">Auto</ion-button>
+            </ion-item>
+
+            <hr>
+
+            <ion-item>
+                <ion-input type="text" placeholder="Phone Number" [(ngModel)]="phonenumber"></ion-input>
+                <ion-button slot="end" size="small" (click)="selectPhoneNumber()">Manual</ion-button>
+                <ion-button slot="end" size="small" (click)="autoSelectPhoneNumber()">Auto</ion-button>
+            </ion-item>
+
+            <hr>
+
+            <ion-item>
+                    <ion-input type="text" placeholder="Address" [(ngModel)]="address"></ion-input>
+                    <ion-button slot="end" size="small" (click)="selectAddress()">Manual</ion-button>
+                    <ion-button slot="end" size="small" (click)="autoSelectAddress()">Auto</ion-button>
+            </ion-item>
+
+            <ion-item>
+                <ion-input type="text" placeholder="Notes" [(ngModel)]="notes"></ion-input>
+            </ion-item>
+
+            <div padding>
+                    <ion-button expand="block" (click)="submitEmail()">Submit Email</ion-button>
+            </div>
+    </div>
+</ion-content>
+
