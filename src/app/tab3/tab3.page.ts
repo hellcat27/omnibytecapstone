@@ -92,7 +92,7 @@ export class Tab3Page {
   async recognizeImage() {
     this.output = '';
     var options = {
-      apikey: '24027dc14088957',
+      apikey: '#USERAPIKEYHERE',
       language: 'eng',
     };
 
@@ -107,7 +107,7 @@ export class Tab3Page {
       headers: new HttpHeaders({
         //'apikey': '24027dc14088957',
         'Content-Type': 'application/octet-stream',//application/x-www-form-urlencoded
-        'Ocp-Apim-Subscription-Key': '233c4930a24644dc9060b9a5a2ef9ccb'
+        'Ocp-Apim-Subscription-Key': '#USERAPIKEYHERE'
       }),
       parameters: new HttpParams({
 
